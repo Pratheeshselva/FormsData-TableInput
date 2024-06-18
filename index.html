@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormsandTables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+           
+        }
+        .container{
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid black;
+            padding: 50px;
+        }
+        .Headerdiv{
+            margin-bottom: 50px;
+        }
+        .custom-width-md{
+            width: 50%;
+        }
+
+    
+        @media (max-width:768px) {
+            .custom-width-md{
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <form id="survey-form ">
+    <div class="container"> 
+       <div class="Headerdiv"> <h1 class="text-center">Please fill out the form</h1></div>
+    <div class="row">
+      
+        <div class="col-md-12 col-lg-4">
+        <label for="userfirstname"  class="form-label" name="userfirstname">First Name:</label>
+        <input type="text" class="form-control custom-width-md emptycheck"  id="firstname" >
+        <label for="userlastname"  class="form-label mt-3" name="userlastname">Last Name:</label>
+        <input type="text" class="form-control custom-width-md emptycheck" id="lastname" >
+        <label for="email"  class="form-label mt-3" name="email" >E-Mail:</label>
+        <input type="email" class="form-control custom-width-md emptycheck" id="email">
+        <label class="mt-3 form-label w-50"  >Gender:</label>
+        <select class="form-select custom-width-md emptycheck" id="gender">
+            <option hidden></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
+       
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <label for="address"  class="form-label" name="address" >Address:</label>
+        <input type="text" class="form-control custom-width-md emptycheck" id="address">
+        <label for="state"  class="form-label mt-3" name="state" >State:</label>
+        <input type="text" class="form-control custom-width-md emptycheck"  id="state">
+        <label for="country"  class="form-label mt-3" name="country"  >Country:</label>
+        <input type="text" class="form-control custom-width-md emptycheck" id="country">
+        <label for="pincode"  class="form-label mt-3" name="pincode"  >Pin code:</label>
+        <input type="text" class="form-control custom-width-md emptycheck" id="pincode">
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <br>
+        <label for="food"  class="form-label" name="food" >Choice of Food:</label><br>
+        <input type="checkbox" id="option1" name="options" value="Idly" class="foods">
+        <label for="option1">Idly</label><br>
+        <input type="checkbox" id="option2" name="options" value="Dosa" class="foods">
+        <label for="option1">Dosa</label><br>
+        <input type="checkbox" id="option3" name="options" value="Pongal" class="foods">
+        <label for="option1">Pongal</label><br>
+        <input type="checkbox" id="option4" name="options" value="Poori" class="foods">
+        <label for="option1">Poori</label><br>
+        <input type="checkbox" id="option5" name="options" value="Chappathi" class="foods">
+        <label for="option1">Chappathi</label><br>
+    </div>
+    <div class="text-center">
+        <input type="button" value="Submit" class="btn btn-primary btn-sm mt-5 w-25"  id="submit" onclick="checks()"></div>
+
+    </div>
+    <div class="text-center">
+        <input type="reset" value="Reset" class="btn btn-primary btn-sm mt-5 w-25"  id="reset" onclick="customreset()"></div>
+    </div> 
+</div>
+
+</form>
+
+<table border="1" class="table text-center" id="tablerow">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Pincode</th>
+        <th>Gender</th>
+        <th>Choice of food</th>
+    </tr>
+</table>
+
+
+    <script src="index.js"></script>
+   
+</body>
+</html>
